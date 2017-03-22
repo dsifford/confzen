@@ -26,7 +26,7 @@ yarn global add confzen
 $ confzen [path/to/config]
 ```
 
-If a path is passed as a parameter, the path is checked to see if a configuration file of that type exists. If the file does, exist, it opens it for modification but only writes back to it if you explicitly ask it to when exiting.
+If a path is passed as a parameter, the path is checked to see if a configuration file of that type exists. If the file exists, it is opened for modification.
 
 If no file is found in the path provided, a new file is created.
 
