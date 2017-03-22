@@ -38,6 +38,8 @@ export function sortMixedArray(a: any, b: any): number {
             case 'number':
             case 'string':
                 return 1;
+            case 'object':
+                return Object.keys(a)[0] < Object.keys(b)[0] ? -1 : 1;
             default:
                 return -1;
         }
@@ -49,9 +51,24 @@ export function stringToPrimitive(value: string): string|number|boolean {
     switch (true) {
         case value === 'true' || value === 'false':
             return value === 'true';
-        case !isNaN(parseInt(value, 10)):
-            return parseInt(value, 10);
+        case !isNaN(Number.parseFloat(value)):
+            return Number.parseFloat(value);
         default:
             return value;
     }
+}
+
+export function deepSortObject(obj: object): object {
+    return Object.keys(obj).sort().reduce((sorted, key) => {
+        if (Array.isArray(obj[key])) {
+            sorted[key] = [...obj[key]];
+            return sorted;
+        }
+        if (typeof obj[key] === 'object') {
+            sorted[key] = deepSortObject(obj[key]);
+            return sorted;
+        }
+        sorted[key] = obj[key];
+        return sorted;
+    }, {});
 }

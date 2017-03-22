@@ -2,6 +2,7 @@
   "name": "confgen",
   "version": "0.1.0",
   "description": "A cli for generating configuration files for JS linters and compilers",
+  "license": "MIT",
   "main": "lib/index.js",
   "author": "Derek P Sifford <dereksifford@gmail.com>",
   "scripts": {
@@ -9,9 +10,8 @@
     "prepublish": "yarn build",
     "debug": "yarn build && node --inspect --debug-brk ./lib/index.js",
     "start": "yarn build && node ./lib/index.js",
-    "test": "ava"
+    "test": "npm run build && ava"
   },
-  "license": "MIT",
   "devDependencies": {
     "@types/blessed": "^0.1.4",
     "@types/json5": "^0.0.29",
@@ -25,5 +25,10 @@
     "blessed": "^0.1.81",
     "json5": "^0.5.1",
     "minimist": "^1.2.0"
+  },
+  "ava": {
+    "files": [
+      "lib/tests/**/*.test.js"
+    ]
   }
 }
