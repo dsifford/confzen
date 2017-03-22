@@ -1,7 +1,7 @@
+![Imgur](http://i.imgur.com/e2ajwrz.png)
+
 # confzen
 > A command line utility for creating and maintaining configuration files for javascript and typescript projects.
-
-[Imgur](http://i.imgur.com/e2ajwrz.png)
 
 ## Why?
 Trying to remember the options that are available for the various compilers and linters is hard. This project assumes that responsibility.
