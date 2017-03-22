@@ -10,7 +10,7 @@ export interface StringOrStringArray extends JSONSchema {
 
 export function isStringOrStringArray(field: JSONSchema): field is StringOrStringArray {
     if (!field.items || !field.type) { return false; }
-    if (field.type === 'array' && (<any>field.items).type === 'string') { return true; }
+    if (field.type === 'array' && (<any>field.items).type === 'string' && !(<any>field.items).enum) { return true; }
     return Array.isArray(field.type)
         && field.type.length === 2
         && field.type.every(t => ['string', 'array'].indexOf(t) > -1)

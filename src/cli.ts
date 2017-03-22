@@ -4,6 +4,7 @@ import genericFields from './genericFields/';
 import Config from './runtime/config';
 import * as t from './runtime/fieldTypes';
 import getSchema, { ConfigKind } from './runtime/getSchema';
+import { deepSortObject } from './runtime/helpers';
 import SchemaParser from './runtime/schemaParser';
 import { configTypePicker, confirmation, listGroup, preview, screen } from './widgets/';
 
@@ -122,7 +123,7 @@ function paginate(key?: string): void {
 }
 
 function repaint(): void {
-    preview.setContent(JSON.stringify(parser.config, null, 4));
+    preview.setContent(JSON.stringify(deepSortObject(parser.config), null, 4));
     preview.setScrollPerc(100);
     screen.render();
 }
