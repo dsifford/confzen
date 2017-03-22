@@ -39,14 +39,14 @@ export function isArrayOfPrimitiveEnum(field: JSONSchema): field is ArrayOfPrimi
 export interface ArrayOfBooleanAndPrimitive extends JSONSchema {
     type: 'array';
     items: {
-        type: ['boolean', ('number' | 'string')];
+        type: ['boolean', ('number' | 'string'|'integer')];
     };
 }
 
 export function isArrayOfBooleanAndPrimitive(field: JSONSchema): field is ArrayOfBooleanAndPrimitive {
     if (!field.items || !field.type || !Array.isArray((<any>field.items).type)) { return false; }
     return field.type === 'array'
-        && (<any>field.items).type.every(t => ['boolean', 'number', 'string'].indexOf(t) !== -1);
+        && (<any>field.items).type.every(t => ['boolean', 'number', 'integer', 'string'].indexOf(t) !== -1);
 }
 
 /**
