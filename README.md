@@ -1,8 +1,18 @@
 # confzen
 > A command line utility for creating and maintaining configuration files for javascript and typescript projects.
 
+[Imgur](http://i.imgur.com/e2ajwrz.png)
+
 ## Why?
 Trying to remember the options that are available for the various compilers and linters is hard. This project assumes that responsibility.
+
+## Currently Available Configurations
+- TypeScript
+- TSLint
+- ESLint
+- Babel
+
+> Need more? Send a PR. The only requirement is a JSON Schema.
 
 ## Example
 
@@ -43,4 +53,4 @@ Select Option | <kbd>Enter</kbd>
 Search downward | <kbd>/</kbd> then `search term` then <kbd>Enter</kbd>
 Search upward | <kbd>?</kbd> then `search term` then <kbd>Enter</kbd>
 Toggle focus between JSON preview and configuration list | <kbd>Tab</kbd>
-Quit | <kbd>Q</kbd>
+Quit | <kbd>q</kbd>
