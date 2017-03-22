@@ -1,6 +1,6 @@
 ![Imgur](http://i.imgur.com/e2ajwrz.png)
 
-# confzen
+# confzen [![Build Status](https://travis-ci.org/dsifford/confzen.svg?branch=master)](https://travis-ci.org/dsifford/confzen)
 > A command line utility for creating and maintaining configuration files for javascript and typescript projects.
 
 ## Why?
