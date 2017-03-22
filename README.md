@@ -1,27 +1,23 @@
-# TODO
+# confzen
+> A command line utility for creating and maintaining configuration files for javascript and typescript projects.
 
-## babel
-- [x] sourcemaps
-- [x] env
-- [x] plugins
-- [x] presets
+## Why?
+Trying to remember the options that are available for the various compilers and linters is hard. This project assumes that responsibility.
 
-## eslint
-- [x] globals
-- [x] parserOptions
+## Example
 
+## Installation
 
-## tslint
+`npm`
+```
+npm install -g confzen
+```
 
-### Easy
-- [x] no-invalid-this 
-- [x] no-namespace 
+`yarn`
+```
+yarn global add confzen
+```
 
-### Needs Special Resolver
-- [x] ban
-- [x] comment-format 
-- [x] trailing-comma 
-- [x] no-unusused-variable 
-- [ ] ordered-imports 
-- [ ] member-ordering 
-- [ ] typedef-whitespace
+## Usage
+
+**TODO**

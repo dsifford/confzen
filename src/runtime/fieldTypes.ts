@@ -21,7 +21,7 @@ export function isStringOrStringArray(field: JSONSchema): field is StringOrStrin
  * Example: tslint "align" field
  */
 export interface ArrayOfPrimitiveEnum extends JSONSchema {
-    type?: ['array'];
+    type?: ['array'] | 'array';
     items: {
         enum: Array<string | boolean | number>;
     };
@@ -39,14 +39,14 @@ export function isArrayOfPrimitiveEnum(field: JSONSchema): field is ArrayOfPrimi
 export interface ArrayOfBooleanAndPrimitive extends JSONSchema {
     type: 'array';
     items: {
-        type: ['boolean', ('integer' | 'string')];
+        type: ['boolean', ('number' | 'string')];
     };
 }
 
 export function isArrayOfBooleanAndPrimitive(field: JSONSchema): field is ArrayOfBooleanAndPrimitive {
     if (!field.items || !field.type || !Array.isArray((<any>field.items).type)) { return false; }
     return field.type === 'array'
-        && (<any>field.items).type.every(t => ['boolean', 'integer', 'string'].indexOf(t) !== -1);
+        && (<any>field.items).type.every(t => ['boolean', 'number', 'string'].indexOf(t) !== -1);
 }
 
 /**

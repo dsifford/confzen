@@ -1,16 +1,22 @@
 {
-  "name": "confgen",
+  "name": "confzen",
   "version": "0.1.0",
-  "description": "A cli for generating configuration files for JS linters and compilers",
+  "description": "A command line utility for creating and maintaining configuration files for javascript and typescript projects",
   "license": "MIT",
-  "main": "lib/index.js",
   "author": "Derek P Sifford <dereksifford@gmail.com>",
+  "main": "lib/index.js",
+  "bin": "lib/index.js",
   "scripts": {
     "build": "tsc -p .",
     "prepublish": "yarn build",
     "debug": "yarn build && node --inspect --debug-brk ./lib/index.js",
     "start": "yarn build && node ./lib/index.js",
-    "test": "npm run build && ava"
+    "test": "yarn build && ava"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "json5": "^0.5.1",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "@types/blessed": "^0.1.4",
@@ -20,11 +26,6 @@
     "ava": "^0.18.2",
     "tslint": "^4.5.1",
     "typescript": "next"
-  },
-  "dependencies": {
-    "blessed": "^0.1.81",
-    "json5": "^0.5.1",
-    "minimist": "^1.2.0"
   },
   "ava": {
     "files": [

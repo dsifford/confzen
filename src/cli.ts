@@ -1,5 +1,3 @@
-// import { writeFileSync } from 'fs';
-// import { join } from 'path';
 import Dispatcher from './complexFields/';
 import { FILENAMES } from './constants';
 import genericFields from './genericFields/';
@@ -49,7 +47,6 @@ function init(configType: ConfigKind): void {
 
         paginate();
         screen.emit('repaint');
-        // writeFileSync(join(__dirname, '../test.json'), JSON.stringify(parser.parsed, null, 4));
     });
 }
 
@@ -126,7 +123,7 @@ function paginate(key?: string): void {
 
 function repaint(): void {
     preview.setContent(JSON.stringify(parser.config, null, 4));
-    preview.setScrollPerc(100); // FIXME: Should we keep this?
+    preview.setScrollPerc(100);
     screen.render();
 }
 
