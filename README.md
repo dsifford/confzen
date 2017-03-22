@@ -6,6 +6,8 @@ Trying to remember the options that are available for the various compilers and 
 
 ## Example
 
+[![asciicast](https://asciinema.org/a/23ftzqfwqu77hhbgihxovjcgn.png)](https://asciinema.org/a/23ftzqfwqu77hhbgihxovjcgn)
+
 ## Installation
 
 `npm`
@@ -20,4 +22,19 @@ yarn global add confzen
 
 ## Usage
 
-**TODO**
+```sh
+$ confzen [path/to/config]
+```
+
+### Keybindings
+
+> **TL;DR** All the expected vim bindings are enabled.
+
+Action | Key
+--- | ---
+Navigation | Arrow keys **OR** <kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd>
+Select Option | <kbd>Enter</kbd>
+Search downward | <kbd>/</kbd> then `search term` then <kbd>Enter</kbd>
+Search upward | <kbd>?</kbd> then `search term` then <kbd>Enter</kbd>
+Toggle focus between JSON preview and configuration list | <kbd>Tab</kbd>
+Quit | <kbd>Q</kbd>
