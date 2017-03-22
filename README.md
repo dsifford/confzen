@@ -26,6 +26,12 @@ yarn global add confzen
 $ confzen [path/to/config]
 ```
 
+If a path is passed as a parameter, the path is checked to see if a configuration file of that type exists. If the file does, exist, it opens it for modification but only writes back to it if you explicitly ask it to when exiting.
+
+If no file is found in the path provided, a new file is created.
+
+If no path is given, the current directory is used as default.
+
 ### Keybindings
 
 > **TL;DR** All the expected vim bindings are enabled.
