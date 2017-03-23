@@ -9,6 +9,13 @@
   "files": [
     "lib/**"
   ],
+  "keywords": [
+    "babel",
+    "eslint",
+    "tsconfig",
+    "tslint",
+    "typescript"
+  ],
   "scripts": {
     "build": "tsc -p .",
     "prepublish": "yarn build",
